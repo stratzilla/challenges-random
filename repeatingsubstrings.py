@@ -2,6 +2,12 @@
 Determine if a string contains strictly
 a repetition of any substrings
 
+for example, "abcabc" is comprised of two
+equal substrings "abc", likewise "defdefdef" is
+three "def". "abcdabc" has no single repeating
+substring so it does not qualify
+
+this implementation suggests
 a string contains only substring repetitions
 if you can shift it and get the same string
 in under len shifts
