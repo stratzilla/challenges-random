@@ -21,9 +21,14 @@ it does not contain strictly substring repetitions
 
 def onlySubstrings(stringOrig):
 	stringCopy = (stringOrig+'.')[:-1] # copy string contents
-	for i in range(1, len(stringCopy)): # for each character
+	'''
+	since a string only passes the test if it contains
+	>1 equal substrings, the longest substring can only be
+	half the length of the original string
+	'''
+	for i in range(0, int(len(stringCopy)/2)):
 		stringCopy = stringCopy[1:]+stringCopy[0] # shift first char to end
-		if stringCopy == stringOrig # if equivalent to original input 
+		if stringCopy == stringOrig: # if equivalent to original input 
 			return True # it consists of substrings only
 	else: # otherwise the only substring is the string itself
 		return False
@@ -34,9 +39,9 @@ if __name__ == '__main__':
     for word in wordList: # for each word
         print(onlySubstrings(word), '\t', word)
 	
-```
+'''
 True	testtest
 False	testteste
 False	test
 False	tetestst
-```
+'''
