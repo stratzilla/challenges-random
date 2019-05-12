@@ -24,17 +24,17 @@ def shiftString(str, n):
 	return str[n:] + str[:n]
 
 def onlySubstrings(str):
-    # test whether shifted string equals
+	# test whether shifted string equals
 	for i in range(1, len(str)):
 		if shiftString(str, i) == str: # if equivalent to original input 
 			return True # it consists of substrings only
 	return False # otherwise the only substring is the string itself
 
 if __name__ == '__main__':
-    wordList = ['testtest','testteste','test','tetestst'] # some test words
-    print('The below words only contain substring repetitions:')
-    for word in wordList: # for each word
-        print(onlySubstrings(word), '\t', word)
+    	wordList = ['testtest','testteste','test','tetestst'] # some test words
+    	print('The below words only contain substring repetitions:')
+    	for word in wordList: # for each word
+		print(onlySubstrings(word), '\t', word)
 	
 '''
 True	testtest
