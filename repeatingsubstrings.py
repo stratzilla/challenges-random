@@ -19,19 +19,16 @@ only become the original after len shifts, meaning
 it does not contain strictly substring repetitions
 '''
 
-def onlySubstrings(stringOrig):
-	stringCopy = (stringOrig+'.')[:-1] # copy string contents
-	'''
-	since a string only passes the test if it contains
-	>1 equal substrings, the longest substring can only be
-	half the length of the original string
-	'''
-	for i in range(0, int(len(stringCopy)/2)):
-		stringCopy = stringCopy[1:]+stringCopy[0] # shift first char to end
-		if stringCopy == stringOrig: # if equivalent to original input 
+def shiftString(str, n):
+	# shift first char to end
+	return str[n:] + str[:n]
+
+def onlySubstrings(str):
+    # test whether shifted string equals
+	for i in range(1, len(str)):
+		if shiftString(str, i) == str: # if equivalent to original input 
 			return True # it consists of substrings only
-	else: # otherwise the only substring is the string itself
-		return False
+	return False # otherwise the only substring is the string itself
 
 if __name__ == '__main__':
     wordList = ['testtest','testteste','test','tetestst'] # some test words
