@@ -11,8 +11,8 @@ with Ada.Text_IO; use Ada.Text_IO;
 procedure Main is
     -- a set of numbers to find subset sum on
     type Set is array(1..5) of Integer;
-    -- init set
     Arr : Set := (2, 8, 4, 9, 1);
+    
     -- find if subset sum exists in a set
     -- @param Arr - the set to check
     -- @param S - the sum to check against Arr
