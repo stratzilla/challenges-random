@@ -7,7 +7,6 @@
 -- 2 + 8 = 10, so there is a subset sum. Likewise 14:
 -- 2 + 8 + 4 = 14. Et cetera
 
--- save as subset_sum.adb and execute like
 -- $ gnatmake subset_sum.adb -o sss
 -- ./sss <arg1> <args2>
 -- <arg1> is the sum to find
