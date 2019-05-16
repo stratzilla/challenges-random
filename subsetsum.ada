@@ -85,6 +85,5 @@ begin
         else
             Put("There is a subset sum.");
         end if;
-    end if;
-    
+    end if;    
 end Main;
