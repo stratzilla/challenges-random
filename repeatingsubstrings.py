@@ -23,6 +23,9 @@ since 4 < len, the string only contains substring
 repetitions. But consider "testteste"; this will
 only become the original after len shifts, meaning
 it does not contain strictly substring repetitions
+
+execute like so:
+$ python repeatingsubstrings.py
 '''
 
 def contains_substring_repetitions(str):
