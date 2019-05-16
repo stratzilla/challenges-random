@@ -8,7 +8,7 @@
 -- 2 + 8 + 4 = 14. Et cetera
 
 -- $ gnatmake subset_sum.adb -o sss
--- ./sss <arg1> <args2>
+-- $ ./sss <arg1> <args2>
 -- <arg1> is the sum to find
 -- <args2> is a space delimited list of five integers
 
